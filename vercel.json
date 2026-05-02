@@ -1,11 +1,13 @@
 {
     "experimentalServices": {
         "frontend": {
+            "entrypoint": "Dental-main",
             "routePrefix": "/",
             "framework": "vite"
         },
         "backend": {
-            "entrypoint": "backend",
+            "entrypoint": "Dental-main/backend/src/server.ts",
+            "framework": "node",
             "routePrefix": "/_/backend"
         }
     }
