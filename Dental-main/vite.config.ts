@@ -7,6 +7,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, '.', '');
   return {
+    base: '/Dental-Project/',
     plugins: [
       react(),
       tailwindcss(),
@@ -26,7 +27,10 @@ export default defineConfig(({ mode }) => {
               type: 'image/png'
             }
           ]
-        }
+        },
+        workbox: {
+    maximumFileSizeToCacheInBytes: 3000000
+  }
       })
     ],
     define: {
